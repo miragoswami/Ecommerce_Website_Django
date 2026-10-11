@@ -1,0 +1,346 @@
+
+:root {
+  --tc-purple: #6b287d;
+  --tc-purple-dark: #501b63;
+
+  --tc-white: #ffffff;
+  --tc-pink: #fff0f6;
+  --tc-pink-hover: #fce2ee;
+  --tc-pink-active: #f9d5e7;
+
+  --tc-text: #493b45;
+  --tc-border: #f1dce7;
+}
+
+/* ========================================
+   TOP NAVBAR
+======================================== */
+
+.tc-navbar {
+  width: 100%;
+  background: var(--tc-white);
+  border-bottom: 1px solid var(--tc-border);
+  box-shadow: 0 2px 8px rgba(80, 27, 99, 0.04);
+  position: relative;
+  z-index: 100;
+}
+
+.tc-navbar .container-fluid {
+  width: 100%;
+  max-width: none;
+  padding: 14px 30px;
+  gap: 24px;
+}
+
+/* MAIN LOGO - KEEP PURPLE */
+
+.tc-navbar .navbar-brand {
+  color: var(--tc-purple) !important;
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.tc-navbar .navbar-brand:hover {
+  color: var(--tc-purple-dark) !important;
+}
+
+/* ========================================
+   SEARCH BAR
+======================================== */
+
+.tc-search {
+  flex: 1;
+  min-width: 160px;
+  max-width: 520px;
+  margin: 0 12px;
+}
+
+.tc-search .input-group {
+  overflow: hidden;
+  border: 1px solid var(--tc-border);
+  border-radius: 9px;
+  background: var(--tc-white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.tc-search .input-group:focus-within {
+  border-color: #e9a9c8;
+  box-shadow: 0 0 0 3px rgba(249, 213, 231, 0.5);
+}
+
+.tc-search .input-group-text {
+  padding: 10px 14px;
+  border: none;
+  background: var(--tc-pink) !important;
+  color: var(--tc-purple);
+}
+
+.tc-search .form-control {
+  min-width: 0;
+  padding: 11px 12px;
+  border: none;
+  background: var(--tc-white);
+  box-shadow: none !important;
+  color: var(--tc-text);
+  font-size: 14px;
+}
+
+.tc-search .form-control::placeholder {
+  color: #a897a1;
+}
+
+/* ========================================
+   RIGHT SIDE MENU
+======================================== */
+
+.tc-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+  flex-shrink: 0;
+}
+
+.tc-menu-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: var(--tc-text) !important;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.tc-menu-link:hover {
+  color: var(--tc-purple) !important;
+}
+
+.tc-menu-icon {
+  display: block;
+  color: #c66b99;
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+/* BUTTONS */
+
+.tc-menu .btn-outline-danger {
+  padding: 8px 12px;
+  border: 1px solid #eabbd1;
+  border-radius: 7px;
+  background: var(--tc-white);
+  color: #a94c7b;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.tc-menu .btn-outline-danger:hover {
+  border-color: #e6a2c1;
+  background: var(--tc-pink-hover);
+  color: var(--tc-purple);
+}
+
+/* BECOME SELLER / DASHBOARD */
+
+.tc-seller-link {
+  max-width: 130px;
+  color: #a94c7b !important;
+  font-weight: 650;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+.tc-seller-link:hover {
+  color: var(--tc-purple) !important;
+}
+
+/* CART COUNT */
+
+.tc-cart-count {
+  background: #d76b9d !important;
+  color: #fff !important;
+  border: 2px solid #fff;
+}
+
+/* ========================================
+   CATEGORY NAVBAR
+======================================== */
+
+.category-navbar {
+  position: relative;
+  z-index: 90;
+  width: 100%;
+  background: var(--tc-white);
+  border-top: 1px solid #fff4f8;
+  border-bottom: 1px solid var(--tc-border);
+}
+
+.category-scroll {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 20px;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* CATEGORY LINKS */
+
+.category-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: 51px;
+  padding: 14px 17px;
+  color: var(--tc-text);
+  font-size: 14px;
+  font-weight: 550;
+  text-decoration: none;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.category-link::after {
+  position: absolute;
+  right: 17px;
+  bottom: 0;
+  left: 17px;
+  height: 3px;
+  border-radius: 4px 4px 0 0;
+  background: #d76b9d;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.category-link:hover {
+  background: var(--tc-pink);
+  color: #a94c7b;
+}
+
+.category-link:hover::after,
+.category-link.active::after {
+  transform: scaleX(1);
+}
+
+.category-link.active {
+  background: #fff5f9;
+  color: #a94c7b;
+  font-weight: 700;
+}
+
+/* ACCESSIBILITY */
+
+.tc-navbar a:focus-visible,
+.tc-navbar button:focus-visible,
+.category-link:focus-visible {
+  outline: 2px solid #d76b9d;
+  outline-offset: 3px;
+}
+
+/* ========================================
+   RESPONSIVE NAVBAR
+======================================== */
+
+@media (max-width: 1200px) {
+  .tc-navbar .container-fluid {
+    padding: 12px 18px;
+    gap: 14px;
+  }
+
+  .tc-navbar .navbar-brand {
+    font-size: 28px !important;
+  }
+
+  .tc-menu {
+    gap: 14px;
+  }
+
+  .tc-search {
+    margin: 0 4px;
+  }
+}
+
+@media (max-width: 992px) {
+  .tc-navbar .container-fluid {
+    flex-wrap: wrap;
+    padding: 12px 16px;
+  }
+
+  .tc-navbar .navbar-brand {
+    font-size: 27px !important;
+  }
+
+  .tc-search {
+    order: 3;
+    flex: 1 0 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .tc-menu {
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+
+  .category-scroll {
+    padding: 0 8px;
+  }
+
+  .category-link {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tc-navbar .container-fluid {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .tc-navbar .navbar-brand {
+    font-size: 25px !important;
+  }
+
+  .tc-menu {
+    gap: 12px;
+  }
+
+  .tc-menu-icon {
+    font-size: 21px;
+  }
+
+  .tc-menu-link {
+    font-size: 11px;
+  }
+
+  .tc-seller-link {
+    max-width: 95px;
+  }
+
+  .tc-menu .btn-outline-danger {
+    padding: 7px;
+  }
+
+  .category-link {
+    min-height: 45px;
+    padding: 12px;
+    font-size: 13px;
+  }
+}

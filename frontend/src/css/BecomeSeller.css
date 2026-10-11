@@ -1,0 +1,525 @@
+
+/* Remove all outside spacing */
+.bs-page {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #f8f7fa;
+  box-sizing: border-box;
+}
+
+/* Make the layout span the entire screen */
+.bs-wrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: #fff;
+}
+
+@media (max-width: 650px) {
+  .bs-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* LEFT INTRODUCTION PANEL */
+
+.bs-intro {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(30px, 4vw, 65px);
+  background: #f2ebf7;
+  color: #352044;
+}
+
+.bs-intro::before,
+.bs-intro::after {
+  display: none;
+}
+
+.bs-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: clamp(40px, 7vh, 85px);
+  color: #612b79;
+  font-size: 23px;
+  font-weight: 750;
+}
+
+.bs-brand-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: #71358b;
+  color: #fff;
+  font-size: 22px;
+}
+
+.bs-intro-label,
+.bs-step-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.bs-intro-label {
+  margin-bottom: 18px;
+  color: #805093;
+}
+
+.bs-intro h1 {
+  margin: 0 0 20px;
+  color: #352044;
+  font-size: clamp(32px, 3.2vw, 52px);
+  font-weight: 750;
+  letter-spacing: -1px;
+  line-height: 1.22;
+}
+
+.bs-intro h1 span {
+  color: #873e9b;
+}
+
+.bs-intro-description {
+  max-width: 480px;
+  margin: 0;
+  color: #71657b;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.bs-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: clamp(35px, 6vh, 65px);
+}
+
+.bs-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.bs-benefit-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e4d4ed;
+  border-radius: 9px;
+  background: #fff;
+  color: #77358d;
+  font-size: 18px;
+}
+
+.bs-benefit h3 {
+  margin: 3px 0 6px;
+  color: #392647;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.bs-benefit p {
+  margin: 0;
+  color: #7c7185;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.bs-intro-footer {
+  margin-top: auto;
+  padding-top: 45px;
+  color: #80728a;
+  font-size: 12px;
+}
+
+/* RIGHT FORM PANEL */
+
+.bs-form-panel {
+  min-width: 0;
+  padding: clamp(30px, 4vw, 65px);
+}
+
+.bs-form-heading {
+  margin-bottom: 38px;
+}
+
+.bs-step-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #813c96;
+}
+
+.bs-form-heading h2 {
+  margin: 0 0 12px;
+  color: #302239;
+  font-size: clamp(28px, 2.5vw, 38px);
+  font-weight: 750;
+  letter-spacing: -0.6px;
+}
+
+.bs-form-heading > p {
+  margin: 0;
+  color: #81788b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* FORM SECTIONS */
+
+.bs-form-section-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.bs-section-number {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: #f4edf8;
+  color: #71358b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.bs-form-section-title h3 {
+  margin: 0 0 5px;
+  color: #3a2c45;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.bs-form-section-title p {
+  margin: 0;
+  color: #8a8191;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE INPUT GRID */
+
+.bs-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 23px 22px;
+}
+
+.bs-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin-bottom: 23px;
+}
+
+.bs-field-grid .bs-field {
+  margin-bottom: 0;
+}
+
+.bs-full-width {
+  grid-column: 1 / -1;
+}
+
+.bs-field label {
+  margin-bottom: 9px;
+  color: #51465c;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.bs-optional {
+  color: #958b9d;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* INPUTS */
+
+.bs-input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 49px;
+  padding: 13px 15px;
+  border: 1px solid #ddd6e4;
+  border-radius: 7px;
+  outline: none;
+  background: #fff;
+  color: #352940;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bs-input::placeholder {
+  color: #aaa1b1;
+  opacity: 1;
+}
+
+.bs-input:hover {
+  border-color: #c6b4d2;
+}
+
+.bs-input:focus {
+  border-color: #85449a;
+  box-shadow: 0 0 0 3px rgba(133, 68, 154, 0.09);
+}
+
+.bs-textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+.bs-description {
+  min-height: 135px;
+}
+
+.bs-input-with-icon {
+  position: relative;
+}
+
+.bs-input-with-icon .bs-input {
+  padding-left: 42px;
+}
+
+.bs-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  color: #897396;
+  font-size: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* DIVIDERS */
+
+.bs-form-divider {
+  height: 1px;
+  margin: 35px 0;
+  border: 0;
+  background: #eee9f1;
+}
+
+/* ACTION BUTTONS */
+
+.bs-form-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.bs-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 49px;
+  padding: 13px 23px;
+  border: 1px solid #71358b;
+  border-radius: 7px;
+  background: #71358b;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.bs-submit-btn:hover:not(:disabled) {
+  background: #5d2875;
+}
+
+.bs-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.bs-button-arrow {
+  font-size: 18px;
+}
+
+.bs-cancel-btn {
+  min-height: 49px;
+  padding: 12px 23px;
+  border: 1px solid #ded7e3;
+  border-radius: 7px;
+  background: #fff;
+  color: #62566d;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.bs-cancel-btn:hover:not(:disabled) {
+  background: #f7f3f9;
+}
+
+.bs-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.bs-button-spinner {
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: bs-spin 0.7s linear infinite;
+}
+
+@keyframes bs-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bs-form-note {
+  margin: 19px 0 0;
+  color: #948a9c;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* MEDIUM SCREENS */
+
+@media (max-width: 1000px) {
+  .bs-page {
+    padding: 16px;
+  }
+
+  .bs-wrapper {
+    grid-template-columns: minmax(230px, 32%) minmax(0, 68%);
+    min-height: calc(100vh - 32px);
+  }
+
+  .bs-intro,
+  .bs-form-panel {
+    padding: 30px 24px;
+  }
+
+  .bs-intro h1 {
+    font-size: 30px;
+  }
+
+  .bs-field-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 14px;
+  }
+}
+
+/* MOBILE SCREENS */
+
+@media (max-width: 650px) {
+  .bs-page {
+    padding: 10px;
+  }
+
+  .bs-wrapper {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: calc(100vh - 20px);
+    border-radius: 9px;
+  }
+
+  .bs-intro {
+    padding: 25px 22px;
+  }
+
+  .bs-brand {
+    margin-bottom: 27px;
+    font-size: 20px;
+  }
+
+  .bs-intro h1 {
+    font-size: 30px;
+  }
+
+  .bs-intro-description {
+    font-size: 13px;
+  }
+
+  .bs-benefits {
+    gap: 18px;
+    margin-top: 27px;
+  }
+
+  .bs-intro-footer {
+    padding-top: 28px;
+  }
+
+  .bs-form-panel {
+    padding: 28px 21px;
+  }
+
+  .bs-form-heading {
+    margin-bottom: 29px;
+  }
+
+  .bs-form-heading h2 {
+    font-size: 27px;
+  }
+
+  .bs-field-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .bs-full-width {
+    grid-column: auto;
+  }
+
+  .bs-form-divider {
+    margin: 27px 0;
+  }
+}
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 380px) {
+  .bs-form-panel {
+    padding: 23px 15px;
+  }
+
+  .bs-form-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .bs-submit-btn,
+  .bs-cancel-btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bs-page *,
+  .bs-page *::before,
+  .bs-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

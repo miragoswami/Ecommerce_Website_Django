@@ -1,0 +1,150 @@
+.checkout-page {
+  min-height: 80vh;
+  background-color: #faf8fb;
+  padding: 50px 7%;
+}
+
+.checkout-title {
+  text-align: center;
+  color: #5a1763;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Form */
+
+.checkout-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.checkout-form h2,
+.checkout-summary h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.checkout-group {
+  margin-bottom: 18px;
+}
+
+.checkout-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: #333;
+}
+
+.checkout-group input,
+.checkout-group textarea,
+.checkout-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.checkout-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.checkout-group input:focus,
+.checkout-group textarea:focus,
+.checkout-group select:focus {
+  border-color: #5a1763;
+}
+
+.place-order-button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5a1763;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.place-order-button:hover {
+  background-color: #45114d;
+}
+
+/* Summary */
+
+.checkout-summary {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 20px;
+}
+
+.checkout-product {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.checkout-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.checkout-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #5a1763;
+}
+
+.back-cart {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  color: #5a1763;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-cart:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .checkout-page {
+    padding: 35px 20px;
+  }
+
+  .checkout-container {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-summary {
+    position: static;
+  }
+}

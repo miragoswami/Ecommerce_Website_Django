@@ -1,0 +1,81 @@
+.category-section {
+  background-color: pink;
+  padding: 40px 0 45px;
+}
+
+/* Category items container */
+.category-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+  padding: 10px 30px 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar */
+.category-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual category */
+.category-item {
+  flex: 0 0 155px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Hover - slightly comes out */
+.category-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Category image */
+.category-image {
+  width: 155px;
+  height: 145px;
+  margin: 0 auto;
+  background-color: #f8e6f0;
+
+  /* Rounded top like reference */
+  border-radius: 80px 80px 15px 15px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+/* Image */
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+/* Hover image */
+.category-item:hover .category-image img {
+  transform: scale(1.05);
+}
+
+/* Slightly lift image background */
+.category-item:hover .category-image {
+  transform: scale(1.03);
+}
+
+/* Category name */
+.category-name {
+  font-size: 16px;
+  color: #222;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 14px;
+  margin-bottom: 0;
+}
